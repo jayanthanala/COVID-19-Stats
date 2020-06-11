@@ -1,9 +1,15 @@
+
+.album,.navbar-brand{
+  background-color: #1B1C1F;
+}
+
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
   background-image:url("https://www.pon-cat.com/application/files/7915/8400/2602/home-banner.jpg");
-  
+  background-color: #1B1C1F;
+
 }
 @media (min-width: 768px) {
   .jumbotron {
