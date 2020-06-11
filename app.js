@@ -41,6 +41,8 @@ app.get("/Country",function(req,res){
       country.push(response.data[i].country);
     }
     //console.log(country);
+    //New Ideas!! 
+    //REFACTOR THE CODE.
   res.render("country",{place:country});
   })
 
