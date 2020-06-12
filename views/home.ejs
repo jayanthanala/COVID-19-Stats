@@ -4,27 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Jekyll v4.0.1">
-  <title>COVID-19 : Stats</title>
+  <title>Album example · Bootstrap</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-  <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#563d7c">
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -48,28 +36,34 @@
 <body>
   <header>
     <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
-          </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">COVID-19 Tracker</h4>
+            <p class="text-muted">This webapp is developed by Jayanth and Vishal.</p>
+          </div>
+          <div class="text-center col-sm-4 offset-md-1 py-4">
+            <h3 class="text-white">Menu</h3>
+            <ul class="list-unstyled ">
+              <li><a href="/" class="text-white active">Home</a></li>
+              <li><a href="/World" class="text-white">World</a></li>
+              <li><a href="/country" class="text-white">Country</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-    <div class="navbar navbar-light bg-dark shadow-sm">
+    <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container d-flex justify-content-between">
         <a href="#" class="navbar-brand d-flex align-items-center">
-          <strong style="color:black">C🦠VID-19</strong>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" /></svg>
+          <strong>Album</strong>
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -81,7 +75,7 @@
         <h1>COVID-19 Stats</h1>
         <p class="lead text-muted">Know the stats of COVID19 all around the World.</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Search By Country</a>
+          <a href="/Country" class="btn btn-primary my-2">Search By Country</a>
 
         </p>
       </div>
@@ -92,40 +86,42 @@
         <div class="row">
           <div class="col-md-4 text-center">
             <div class="card" style="width: 100%;">
-              <div class="text-center card-body bg-dark" style="color:white" >
+              <div class="text-center card-body bg-dark" style="color:white">
                 <h5 class="card-title">Top-5</h5>
                 <p class="card-text">Most affected Countries.</p>
               </div>
 
               <ul class="list-group list-group-flush">
                 <% for(var i=1;i<6;i++){%>
-                  <li class="list-group-item"><%=place[i]%></li>
+                <li class="list-group-item"><%=place[i]%></li>
                 <%}%>
               </ul>
               <div class="card-body">
-                <a href="#" class="btn btn-primary my-">View More</a>
+                <a href="/World" class="btn btn-primary my-">View More</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 text-center">
-            <div class="card" style="width: 100%;">
-               <img src="" class="card-img-top" alt="">
-              <div class="card-body text-center bg-dark" style="color:white">
-                <h5 class="card-title">Global Stats</h5>
-                <p class="card-text">Stats all over the world.</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Total Cases: </b><%=tc%></li>
-                <li class="list-group-item"><b>Total Deaths:</b><%=td%></li>
-                <li class="list-group-item"><b>Total Active:</b><%=ta%></li>
-                <li class="list-group-item"><b>Cases Per Million:</b><%=cpm%></li>
-                <li class="list-group-item"><b>Deaths Per Million:</b><%=dpm%></li>
-              </ul>
-              <div class="card-body">
-                <a href="#" class="btn btn-primary my-">View More</a>
-              </div>
-            </div>
-          </div>
+           <div class="card" style="width: 100%;">
+              <img src="" class="card-img-top" alt="">
+             <div class="card-body text-center bg-dark" style="color:white">
+               <h5 class="card-title">Global Stats</h5>
+               <p class="card-text">Stats all over the world.</p>
+             </div>
+             <ul class="list-group list-group-flush">
+               <li class="list-group-item"><b>Total Cases: </b><%=fun(d.cases)%></li>
+               <li class="list-group-item"><b>Total Deaths:</b><%=fun(d.deaths)%></li>
+               <li class="list-group-item"><b>Total Active:</b><%=fun(d.active)%></li>
+               <li class="list-group-item"><b>Total Recovered:</b><%=fun(d.recovered)%></li>
+               <li class="list-group-item"><b>Cases Per Million:</b><%=fun(d.casesPerOneMillion)%></li>
+
+             </ul>
+             <div class="card-body">
+               <a href="#" class="btn btn-primary my-">View More</a>
+             </div>
+           </div>
+         </div>
+
           <div class="col-md-4 text-center">
             <div class="card" style="width: 100%">
               <img src="..." class="card-img-top" alt="...">
@@ -134,19 +130,25 @@
                 <p class="card-text">Count on today's stats.</p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Today's Cases: </b><%=toc%></li>
-                <li class="list-group-item"><b>Today's Deaths:</b><%=tod%></li>
-                <li class="list-group-item"><b>Critical Cases:</b><%=cr%></li>
+                <li class="list-group-item"><b>Today's Cases: </b><%=fun(d.todayCases)%></li>
+                <li class="list-group-item"><b>Today's Deaths:</b><%=fun(d.todayDeaths)%></li>
+                <li class="list-group-item"><b>Critical Cases:</b><%=fun(d.critical)%></li>
               </ul>
 
             </div>
           </div>
   </main>
 
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
         <a href="#">Back to top</a>
+      </p>
+      <p>&copy 2020 Jayanth Anala</p>
+    </div>
+  </footer>
 </body>
 
 </html>

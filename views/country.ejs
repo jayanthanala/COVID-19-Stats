@@ -4,9 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Jekyll v4.0.1">
   <title>Cover Template · Bootstrap</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
@@ -14,15 +11,6 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-  <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#563d7c">
 
 
   <style>
@@ -46,7 +34,7 @@
 </head>
 
 <body class="text-center">
-  <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="d-flex w-100 h-100 p2 flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
         <h3 class="masthead-brand">C🦠VID-19</h3>
@@ -57,9 +45,9 @@
         </nav>
       </div>
     </header>
-
+<hr class="hr1">
     <main role="main" class="inner cover">
-      <div class="container">
+      <div class="container contpart">
         <div class="row">
           <div class="col-md-12 col-sm-12 text-center">
             <h1 class="cover-heading">Search By Country</h1>
@@ -67,8 +55,10 @@
           </div>
           <div class="col-md-12 col-sm-12 text-center">
             <form class="" action="/place" method="post">
-              <input type="text" class="form-control" name="place" placeholder="Country" required>
-              <button type="submit" class="lead btn btn-lg btn-secondary">Search</button>
+              <center>
+                <input type="text" class="form-control" name="place" placeholder="Country" style="" required>
+              </center>
+              <button type="submit" class="lead btn btn-sm btn-secondary">Search</button>
             </form>
           </div>
         </div>
@@ -78,14 +68,14 @@
         <div class="row">
           <div class="col-md-6 col-sm-12 text-center">
             <form class="" action="/place" method="post">
-            <% for(var i=1;i<place.length/2;i++){%>
+            <% for(var i=1;i<place.length/2+1;i++){%>
               <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value="<%=place%>"><%=place[i]%></button></li>
               <%}%>
             </form>
 
           </div>
           <div class="col-md-6 col-sm-12 text-center">
-            <% for(var i=place.length/2;i<place.length;i++){ %>
+            <% for(var i=place.length/2+1;i<place.length-1;i++){ %>
               <form class="" action="/place" method="post">
                 <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value="<%=place%>"><%=place[i]%></button></li>
               </form>
@@ -99,7 +89,8 @@
 
     </main>
 
-    <footer class="mastfoot mt-auto">
+
+    <footer class="mastfoot">
       <div class="inner">
         <p>&copy 2020 Jayanth Anala.</p>
       </div>

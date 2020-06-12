@@ -1,3 +1,8 @@
+.table{
+  background-color: #1B1C1F;
+}
+
+
 /*
  * Globals
  */
@@ -105,62 +110,116 @@ body {
   color: rgba(255, 255, 255, .5);
 }
 
-
-
-
 /*//////////////////////* Additions */
 
 @media (max-width:2732px) and (min-width:768px){
-  .form-control{
-    width:55%;
-    display:block;
-  }
 
-  .cover-heading{
-    margin:50px 0 30px;
+  h1{
+    /* large disp needed */
+    font-size:5.5rem;
+    margin-top: -20px;
   }
 
   .p2{
     padding:30px 50px 0;
   }
 
-  button.lead{
-    margin:10px;
-  }
-
   main,header,.p2{
     background-color: #131313;
   }
+
   .mastfoot{
     margin:25px;
   }
 }
 
 
+
+
+
+/*//////////////////////* Additions */
+
+@media (max-width:2732px) and (min-width:768px){
+
+
+  .cont{
+    width:70%;
+    margin: 6rem auto 5rem auto;
+  }
+
+  h1{
+    font-size: 5.5rem;
+  }
+
+  .btnmod{
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .col-md-6{
+    padding:-5px;
+    margin-bottom: 20px;
+  }
+
+h2{
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+
+  .p2{
+    padding:30px 50px 0;
+  }
+
+  main,header,.p2{
+    background-color: #131313;
+  }
+
+  .modal-content{
+    background-color:#131313;
+  }
+
+  .mastfoot{
+    margin:25px;
+  }
+}
 /****************************************** phone ***********************/
 
 @media (max-width:575px) {
 
-  .hr1{
-    color:white;
+  h1{
+    margin: 25px;
+    font-size:3.5rem;
   }
 
-  .form-control{
-    width:100%;
+  h2{
+    margin: 25px;
+    font-size: 3rem;
   }
-
-  button.lead{
-    margin:15px;
+  .btn{
+    margin:0;
   }
-
-  .cover-heading{
-    font-size: 2rem;
-    margin:15px;
-  }
-
   .p2{
-    padding:2rem 0 0;
+    padding:2rem 2rem 0;
     background-color: #131313;
+  }
+
+  .container{
+    padding:0;
+  }
+  h1{
+    margin:2rem auto 2rem auto;
+    font-size:3.0rem;
+
+  }
+
+  .modal-content{
+    background-color:#131313;
+  }
+
+  .btnmod{
+    position: relative;
+    margin-bottom: 30px;
   }
 
   .mastfoot{

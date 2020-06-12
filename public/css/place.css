@@ -109,3 +109,50 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+/*//////////////////////* Additions */
+
+@media (max-width:2732px) and (min-width:768px){
+
+  h1{
+    /* large disp needed */
+    font-size:5.5rem;
+    margin-top: -20px;
+  }
+
+  .p2{
+    padding:30px 50px 0;
+  }
+
+  main,header,.p2{
+    background-color: #131313;
+  }
+
+  .mastfoot{
+    margin:25px;
+  }
+}
+
+
+
+/****************************************** phone ***********************/
+
+@media (max-width:575px) {
+
+  h1{
+    margin: 25px;
+    font-size:3.5rem;
+  }
+  .btn{
+    margin:0;
+  }
+  .p2{
+    padding:2rem 2rem 0;
+    background-color: #131313;
+  }
+
+  .mastfoot{
+    margin-top:25px;
+  }
+
+}
