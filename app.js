@@ -19,8 +19,10 @@ app.get("/", function(req, res) {
         country.push(response.data[i].country);
       }
       var d = response.data[0];
+      var data = response.data;
       res.render("home", {
         d: d,
+        data:data,
         place: country,
         fun: numberWithCommas
       });

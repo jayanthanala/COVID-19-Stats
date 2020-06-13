@@ -4,15 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Album example · Bootstrap</title>
+  <title>COVID-19 Stats</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -35,12 +35,12 @@
 
 <body>
   <header>
-    <div class="collapse bg-dark" id="navbarHeader">
+    <div class="collapse" id="navbarHeader">
       <div class="container">
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">COVID-19 Tracker</h4>
-            <p class="text-muted">This webapp is developed by Jayanth and Vishal.</p>
+            <p class="text-muted">This webapp is developed by Jayanth Anala.</p>
           </div>
           <div class="text-center col-sm-4 offset-md-1 py-4">
             <h3 class="text-white">Menu</h3>
@@ -53,13 +53,11 @@
         </div>
       </div>
     </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar navbar-dark shadow-sm">
       <div class="container d-flex justify-content-between">
         <a href="#" class="navbar-brand d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-            <circle cx="12" cy="13" r="4" /></svg>
-          <strong>Album</strong>
+
+          <strong>C🦠VID-19</strong>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -75,7 +73,7 @@
         <h1>COVID-19 Stats</h1>
         <p class="lead text-muted">Know the stats of COVID19 all around the World.</p>
         <p>
-          <a href="/Country" class="btn btn-primary my-2">Search By Country</a>
+          <a href="/Country" class="btn btn-secondary my-2">Search By Country</a>
 
         </p>
       </div>
@@ -86,46 +84,47 @@
         <div class="row">
           <div class="col-md-4 text-center">
             <div class="card" style="width: 100%;">
-              <div class="text-center card-body bg-dark" style="color:white">
+              <div class="text-center card-body bg-danger" style="color:black">
                 <h5 class="card-title">Top-5</h5>
                 <p class="card-text">Most affected Countries.</p>
               </div>
 
               <ul class="list-group list-group-flush">
                 <% for(var i=1;i<6;i++){%>
-                <li class="list-group-item"><%=place[i]%></li>
+                <li class="list-group-item"><b><%=place[i]%></b></li>
                 <%}%>
               </ul>
               <div class="card-body">
-                <a href="/World" class="btn btn-primary my-">View More</a>
+                <a href="/world" class="btn btn-secondary my-2">View More</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 text-center">
            <div class="card" style="width: 100%;">
               <img src="" class="card-img-top" alt="">
-             <div class="card-body text-center bg-dark" style="color:white">
+             <div class="card-body text-center bg-danger" style="color:black">
                <h5 class="card-title">Global Stats</h5>
                <p class="card-text">Stats all over the world.</p>
              </div>
              <ul class="list-group list-group-flush">
-               <li class="list-group-item"><b>Total Cases: </b><%=fun(d.cases)%></li>
-               <li class="list-group-item"><b>Total Deaths:</b><%=fun(d.deaths)%></li>
-               <li class="list-group-item"><b>Total Active:</b><%=fun(d.active)%></li>
-               <li class="list-group-item"><b>Total Recovered:</b><%=fun(d.recovered)%></li>
-               <li class="list-group-item"><b>Cases Per Million:</b><%=fun(d.casesPerOneMillion)%></li>
+               <li class="list-group-item"><b>Countries:   </b><%=fun(data.length)%></li>
+               <li class="list-group-item"> <b>Cases:    </b><%=fun(d.cases)%></li>
+                <li class="list-group-item"><b>Deaths:  </b><%=fun(d.deaths)%></li>
+                <li class="list-group-item"><b>Active:  </b><%=fun(d.active)%></li>
+                <li class="list-group-item"><b>Recovered:</b><%=fun(d.recovered)%></li>
 
-             </ul>
-             <div class="card-body">
-               <a href="#" class="btn btn-primary my-">View More</a>
-             </div>
-           </div>
-         </div>
+
+              </ul>
+              <div class="card-body">
+                <a href="/world" class="btn btn-secondary my-">View More</a>
+              </div>
+            </div>
+          </div>
 
           <div class="col-md-4 text-center">
             <div class="card" style="width: 100%">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body bg-dark text-center" style="color:white">
+
+              <div class="card-body text-center bg-danger" style="color:black">
                 <h5 class="card-title">Today's Stats</h5>
                 <p class="card-text">Count on today's stats.</p>
               </div>
@@ -134,7 +133,6 @@
                 <li class="list-group-item"><b>Today's Deaths:</b><%=fun(d.todayDeaths)%></li>
                 <li class="list-group-item"><b>Critical Cases:</b><%=fun(d.critical)%></li>
               </ul>
-
             </div>
           </div>
   </main>

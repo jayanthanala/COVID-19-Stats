@@ -5,7 +5,33 @@
   margin-bottom: 0;
   background-image:url("https://www.pon-cat.com/application/files/7915/8400/2602/home-banner.jpg");
   background-color: #fff;
+  border-radius: 0;
 }
+
+a,a:hover{
+  color:white;
+  text-decoration: none;
+}
+
+.btn:hover{
+  background-color:#DD3444;
+}
+
+.col-sm-8,.offset-md-1,.navbar-dark,body{
+  background-color: #131313;
+}
+.card,.card-body,.list-group-item{
+  color:white;
+  background-color: #1B1C1F;
+}
+
+.card-body,.card{
+  border-radius: 0.5rem;
+}
+
+
+
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
