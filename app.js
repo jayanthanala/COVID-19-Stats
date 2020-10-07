@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.set("view engine", 'ejs');
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 
 ////////////////////////////////////////////// GET Request //////////////////////////////////
 app.get("/", function(req, res) {
@@ -94,6 +94,9 @@ app.get("/search/state/district",(req,res) => {
   .then((response) => {
     var data = response.data;
     res.render("disearch",{data:data});
+  })
+  .catch(function(err) {
+    console.log(err);
   });
 });
 
@@ -103,6 +106,9 @@ app.get("/india",(req,res) => {
     var state = req.query.state;
     res.render("district",{data:response.data, s:state,fun: numberWithCommas});
   })
+  .catch(function(err) {
+    console.log(err);
+  });
 });
 
 ////////////////////////////////////////////// POST Request //////////////////////////////////

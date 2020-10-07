@@ -30,7 +30,7 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  <link href="css/country.css" rel="stylesheet">
+  <link href="/css/country.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -46,32 +46,54 @@
         </nav>
       </div>
     </header>
-<hr class="hr1">
-    <main role="main" class="inner cover">
+
+
       <div class="container contpart">
         <div class="row">
           <div class="col-md-12 col-sm-12 text-center">
-            <h1 class="cover-heading">Search By State</h1>
+            <h1 class="cover-heading" >Search By State</h1>
             <p class="lead">Get detailed stats by District Level.</p>
           </div>
           <div class="col-md-12 col-sm-12 text-center">
-            <form class="" action="/india" method="get">
-            <div class="form-group">
-            <label for="exampleFormControlSelect1">State</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="state">
-              <option value="">none</option>
-            <% for(var i=0;i<data.length;i++){%>
-              <option value="<%=i%>"><%=data[i].state%></option>
-            <%}%>
-          </select>
-          </div>
-             <input type="submit" value="Submit">
-            </form>
+            <center>
+              <form class="" action="/india" method="get">
+              <div class="form-group">
+              <label for="exampleFormControlSelect1"></label>
+              <select class="form-control" id="exampleFormControlSelect1" name="state">
+                <option value="">----</option>
+              <% for(var i=0;i<data.length;i++){%>
+                <option value="<%=i%>"><%=data[i].state%></option>
+              <%}%>
+              </select>
+              </div>
+               <input type="submit" class="btn btn-secondary" value="Submit">
+              </form>
+            </center>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-12 text-center">
+                  <% for(var i=1;i<5;i++){ %>
+                    <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value=""><%=data[i].state%></button></li>
+                    <%}%>
+                </div>
+                <div class="col-md-6 col-sm-12 text-center">
+                  <% for(var i=6;i<10;i++){ %>
+                    <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value=""><%=data[i].state%></button></li>
+                    <%}%>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
 
-    </main>
+
+
+
+
 
 
     <footer class="mastfoot">

@@ -42,6 +42,7 @@
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/world">World</a>
           <a class="nav-link active" href="/country">Country</a>
+          <a class="nav-link" href="/search/state/district">State</a>
         </nav>
       </div>
     </header>
@@ -67,21 +68,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-12 text-center">
-            <form class="" action="/place" method="post">
-            <% for(var i=1;i<place.length/2+1;i++){%>
+            <% for(var i=1;i<5;i++){ %>
               <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value="<%=place%>"><%=place[i]%></button></li>
               <%}%>
-            </form>
-
           </div>
           <div class="col-md-6 col-sm-12 text-center">
-            <% for(var i=place.length/2+1;i<place.length-1;i++){ %>
-              <form class="" action="/place" method="post">
-                <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value="<%=place%>"><%=place[i]%></button></li>
-              </form>
+            <% for(var i=6;i<10;i++){ %>
+              <li class="list-group-item" style="background-color:#1B1C1F"><button style="color:#DBDBDB" class="btn" type="submit" name="searchbtn" value="<%=place%>"><%=place[i]%></button></li>
               <%}%>
           </div>
-
         </div>
 
       </div>
