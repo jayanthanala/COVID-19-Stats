@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>COVID-19 Stats</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="css/country.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <div class="d-flex w-100 h-100 p2 flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">C🦠VID-19</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/world">World</a>
+          <a class="nav-link" href="/country">Country</a>
+          <a class="nav-link active" href="/search/state/district">State</a>
+        </nav>
+      </div>
+    </header>
+<hr class="hr1">
+    <main role="main" class="inner cover">
+      <div class="container contpart">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 text-center">
+            <h1 class="cover-heading">Search By State</h1>
+            <p class="lead">Get detailed stats by District Level.</p>
+          </div>
+          <div class="col-md-12 col-sm-12 text-center">
+            <form class="" action="/india" method="get">
+            <div class="form-group">
+            <label for="exampleFormControlSelect1">State</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="state">
+              <option value="">none</option>
+            <% for(var i=0;i<data.length;i++){%>
+              <option value="<%=i%>"><%=data[i].state%></option>
+            <%}%>
+          </select>
+          </div>
+             <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+    <footer class="mastfoot">
+      <div class="inner">
+        <p>&copy 2020 Jayanth Anala.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

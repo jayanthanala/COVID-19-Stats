@@ -47,7 +47,6 @@ app.get("/Country", function(req, res) {
     });
 });
 
-
 app.get("/World", function(req, res) {
   var country = [];
   var totalCases = [];
@@ -88,6 +87,23 @@ app.get("/World", function(req, res) {
       });
     })
 });
+//
+
+app.get("/search/state/district",(req,res) => {
+  axios.get("https://api.covidindiatracker.com/state_data.json")
+  .then((response) => {
+    var data = response.data;
+    res.render("disearch",{data:data});
+  });
+});
+
+app.get("/india",(req,res) => {
+  axios.get("https://api.covidindiatracker.com/state_data.json")
+  .then((response) => {
+    var state = req.query.state;
+    res.render("district",{data:response.data, s:state,fun: numberWithCommas});
+  })
+});
 
 ////////////////////////////////////////////// POST Request //////////////////////////////////
 
@@ -113,7 +129,7 @@ app.post("/place", function(req, res) {
 
 ////////////////////////////////////////////// PORTS /////////////////////////////////////////
 
-app.listen(process.env.PORT, function() {
+app.listen(3000, function() {
   console.log("Server is up at 3000");
 });
 
