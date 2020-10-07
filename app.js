@@ -135,7 +135,7 @@ app.post("/place", function(req, res) {
 
 ////////////////////////////////////////////// PORTS /////////////////////////////////////////
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is up at 3000");
 });
 
